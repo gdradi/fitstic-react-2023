@@ -43,3 +43,11 @@
 - Typescript https://www.typescriptlang.org/#installation
 - Chrome
    - React Developer Tools https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
+
+
+## Link utili
+- Create react app https://create-react-app.dev/docs/adding-typescript
+- Handbook Typescript https://www.typescriptlang.org/docs/handbook/intro.html
+- Sass https://sass-lang.com/
+- Equality Comparison in Javascript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness?retiredLocale=it
+- Hoisting https://developer.mozilla.org/en-US/docs/Glossary/Hoisting?retiredLocale=it
