@@ -23,7 +23,7 @@ interface Post {
  */
 interface PostWithLikes extends Post {
     numLikes: number;
-} 
+}
 
 
 /** Qui posso passare indistintamente un Post o un PostWithLikes, perchè
@@ -104,10 +104,10 @@ interface SumFunction {
  * @returns 
  */
 const sum: SumFunction = (n1, n2) => {
-    return n1+n2;
+    return n1 + n2;
 }
 
-console.log(sum(1,1));
+console.log(sum(1, 1));
 
 
 interface DatoConFunzione {
@@ -126,12 +126,45 @@ interface DatoConFunzione {
  * implementare una funzione che si chiama calcola
  * che prende in ingresso due numeri e una funzione
  * e restituisce 
+ * 
+ * console.log(calcola(2, 3, somma));  // -> 5
+ * console.log(calcola(6, 6, moltiplicazione)) // -> 36
  */
 
-//calcola(1,2,somma)  // -> 3
-//calcola(1,2,moltiplicazione) // -> 2
 
 
+/** Soluzione  */
+
+// Interfaccia funzionale che rappresenta una generica operazione tra due numeri
+interface Operation {
+    (n1: number, n2: number): number;
+};
+// Implementazione della funzione somma, di tipo Operation
+const somma: Operation = (n1, n2) => n1 + n2;
+// Implementazione della funzione moltiplicazione, di tipo Operation
+const moltiplicazione: Operation = (n1, n2) => n1 * n2;
+
+// Definizione dell'interfaccia funzione della funzione calcola (opzionale)
+interface CalcolaFunction {
+    (n1: number, n2: number, operation: Operation): number;
+
+    /**
+     * ReturnType<Operation> serve per inferire il tipo di ritorno dell'interfaccia funzionale Operation
+     */
+    // (n1: number, n2: number, operation: Operation): ReturnType<Operation>; 
+}
+/**
+ * Implementazione della funzione calcola - il terzo parametro è di tipo Operation
+ * @param n1 
+ * @param n2 
+ * @param operation 
+ * @returns 
+ */
+const calcola = (n1, n2, operation) => operation(n1, n2);
+
+console.log(calcola(2, 3, somma));  // -> 5
+console.log(calcola(6, 6, moltiplicazione)) // -> 36
 
 
 export { };
+
