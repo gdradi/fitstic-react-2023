@@ -1,3 +1,6 @@
+// Importazione con percorso relativo a questo file
+import "./oop";
+
 console.log("hello world!");
 
 let myVariable1 = 100;
