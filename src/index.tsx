@@ -6,7 +6,7 @@ import "./app.scss";
 // Importazione dei file di ripasso typescript
 // il percorso di importazione è relativo a questo file
 // import "./typescript/ripasso";
-import "./typescript/oop";
+// import "./typescript/oop";
 import "./typescript/interfacce";
 
 

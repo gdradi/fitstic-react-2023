@@ -131,7 +131,31 @@ modificaNumero(n);
 console.log("Log3 n", n);
 
 
+enum Gender { MALE, FEMALE, OTHER }
+const myGender: Gender = Gender.MALE;
+
+// Scritture alternative
+// enum Gender {
+//     MALE = "male",
+//     FEMALE = "female",
+//     OTHER = "other"
+// }
+// enum Gender {
+//     MALE = 0,
+//     FEMALE = 1,
+//     OTHER = 2
+// }
 
 
+/**
+ * Per confrontare una variabile con un tipo noto (es: confronto tra numeri, stringhe, ecc),
+ * meglio sempre usare il triplo uguale ===      es:    if (myNum === 5 || myNum === myNum2) { .... }
+ * 
+ * Per confrontare una variabile con un null, meglio usare il doppio uguale
+ * if (myObject == null) { ..  }     <- questa scrittura intercetta come vero anche il caso in cui myObject è undefined
+ */
+// if (var1 != null) {
+//     var1.proprietà = 1;
+// }
 
 export { };

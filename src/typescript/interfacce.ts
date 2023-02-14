@@ -81,6 +81,26 @@ const postWithLike1: PostWithLikes = {
     numLikes: 100
 }
 
+// const postId = postWithLike1.id;
+// const body = postWithLike1.body;
+// const author = postWithLike1.author;
+
+/** 
+ * Estraggo dall'oggetto postWithLike1 
+ * le proprietà author e id per poterle
+ * usare direttamente come variabili
+ */
+const { author, id } = postWithLike1;
+/**
+ * Se voglio, posso anche rinominare al volo la variabile estratta
+ * Devo farlo o per maggiore chiarezza oppure per evitare conflitti con altre variabili
+ * che si chiamano allo stesso modo
+ */
+const { author: author2, id: id2 } = post1;
+
+console.log("Id del poste: ", id2);
+console.log("Nome autore del post: ", author2.name);
+
 
 stampaPostInDom(postWithLike1);
 
