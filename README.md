@@ -51,3 +51,8 @@
 - Sass https://sass-lang.com/
 - Equality Comparison in Javascript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness?retiredLocale=it
 - Hoisting https://developer.mozilla.org/en-US/docs/Glossary/Hoisting?retiredLocale=it
+
+
+## Registrazione lezioni
+- Lezione 1: https://vem-cloud.webex.com/vem-cloud/ldr.php?RCID=f9c86e3c58953b05fb64d475c64b336c
+- Lezione 2: https://vem-cloud.webex.com/vem-cloud/ldr.php?RCID=91bee07b822e36d2ba9ac9b6b08d60c0
