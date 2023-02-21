@@ -139,7 +139,6 @@ interface DatoConFunzione {
 
 
 
-
 /**
  * Esercizio
  * 
@@ -187,4 +186,7 @@ console.log(calcola(6, 6, moltiplicazione)) // -> 36
 
 
 export { };
+
+
+
 
