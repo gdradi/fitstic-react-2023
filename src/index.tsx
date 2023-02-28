@@ -1,8 +1,10 @@
 import _ from 'lodash';
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import { App } from './App';
+// import { App } from './App';
 import "./app.scss";
+import { Display } from './Display';
+import { Header } from './Header';
 
 // Importazione dei file di ripasso typescript
 // il percorso di importazione è relativo a questo file
@@ -59,7 +61,7 @@ const funzionePerSwitch = () => {
 }
 
 const funzionePerCiclo = () => {
-  //let result: JSX.Element[] = [];
+  // let result: JSX.Element[] = [];
   // for (let i = 0; i < array.length; i++) {
   //   result.push(<div>Elemento alla posizione {i}: {array[i]}</div>);
   // }
@@ -76,6 +78,8 @@ const elementoPerNome = <div className="riquadro-nome">
   {nome}
 </div>
 
+
+
 const elemento = <div className="miaclasse">
   {elementoPerNome}
   {elementoPerNome}
@@ -85,7 +89,7 @@ const elemento = <div className="miaclasse">
       ? <div className="riquadro-nome">pari</div>
       : null} */}
 
-    {/* {array.length % 2 === 0 && <div>pari</div>} */}
+    {array.length % 2 === 0 && <div>pari</div>}
 
     {array.length % 2 === 0
       ? <div className="riquadro-nome">pari</div>
@@ -111,7 +115,7 @@ const elemento = <div className="miaclasse">
     </div>)}
 
     {_.map(arrayDiPost, (post, index) => {
-      return <div className="riquadro-nome">
+      return <div className="riquadro-nome" key={index}>
         <h1>Post id: {post.id}</h1>
         <p>{post.body}</p>
         <div>Scritto da: {post.author}</div>
@@ -126,8 +130,51 @@ const elemento = <div className="miaclasse">
 </div>;
 
 
+// function App() {
+//   return <div>Ciao sono app!</div>
+// }
+
+
+
+
+const App: React.FunctionComponent = () => {
+  const myTitle = "Mio titolo 1";
+
+  // Definizione di uno stato "counter" di tipo number
+  const [counter, setCounter] = useState<number>(0);
+  const counterNegativo = -counter;
+
+  console.log("App!");
+
+  return <div>
+    {/* <Header title={myTitle} /> */}
+    <Header title={myTitle} className="red-text" />
+    <div>Ciao sono app!</div>
+
+    <Display counter={counter} />
+    <Display counter={counterNegativo} />
+
+    <button onClick={() => {
+      setCounter(counter + 2);
+      // setCounter(counter => {
+      //   console.log("primo set counter: ", counter);
+      //   return counter + 1
+      // });
+      // setCounter(counter + 1);
+      // console.log("log in mezzo!");
+      // setCounter(counter => {
+      //   console.log("secondo set counter: ", counter);
+      //   return counter + 1
+      // });
+      // console.log("log in fondo!");
+
+    }}>Bottone</button>
+  </div>
+}
+
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
-root.render(elemento);
+root.render(<App />);

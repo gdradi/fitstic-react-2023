@@ -51,9 +51,11 @@
 - Sass https://sass-lang.com/
 - Equality Comparison in Javascript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness?retiredLocale=it
 - Hoisting https://developer.mozilla.org/en-US/docs/Glossary/Hoisting?retiredLocale=it
+- Render in react https://beta.reactjs.org/learn/adding-interactivity
 
 
 ## Registrazione lezioni
 - Lezione 1: https://vem-cloud.webex.com/vem-cloud/ldr.php?RCID=f9c86e3c58953b05fb64d475c64b336c
 - Lezione 2: https://vem-cloud.webex.com/vem-cloud/ldr.php?RCID=91bee07b822e36d2ba9ac9b6b08d60c0
 - Lezione 3: https://vem-cloud.webex.com/vem-cloud/ldr.php?RCID=620d16dc1461efe7cdd57a3cc7fccacf
+- Lezione 4: https://vem-cloud.webex.com/vem-cloud/ldr.php?RCID=8fd6760f5a9249f877eb82385e378394
