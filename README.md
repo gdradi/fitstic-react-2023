@@ -61,3 +61,4 @@
 - Lezione 2: https://vem-cloud.webex.com/vem-cloud/ldr.php?RCID=91bee07b822e36d2ba9ac9b6b08d60c0
 - Lezione 3: https://vem-cloud.webex.com/vem-cloud/ldr.php?RCID=620d16dc1461efe7cdd57a3cc7fccacf
 - Lezione 4: https://vem-cloud.webex.com/vem-cloud/ldr.php?RCID=8fd6760f5a9249f877eb82385e378394
+- Lezione 5: https://vem-cloud.webex.com/vem-cloud/ldr.php?RCID=6d28ec4bdb1a3fa3cc9c106f11b5bb61
