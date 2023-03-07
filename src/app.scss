@@ -11,9 +11,11 @@ body {
     margin: auto;
     margin-top: 10vh;
     text-align: center;
+
     h1 {
-       font-size: 3rem;
+        font-size: 3rem;
     }
+
     img {
         width: 50vw;
     }
@@ -47,10 +49,38 @@ body {
     background: white;
     display: flex;
     align-items: center;
+
     .hint {
         margin-right: 2rem;
     }
+
     .value {
         font-size: 3rem;
+    }
+}
+
+
+input,
+textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    width: 400px;
+}
+
+.form {
+
+    border-radius: 5px;
+    background: white;
+    padding: 1rem;
+    margin: 1rem;
+
+    &>* {
+        display: flex;
+    }
+
+    .label {
+        width: 20%;
+        text-align: right;
+        padding-right: 2rem;
     }
 }

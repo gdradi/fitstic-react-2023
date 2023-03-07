@@ -1,9 +1,14 @@
+import 'antd/dist/reset.css';
+import "./app.scss";
+
 import _ from 'lodash';
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
+import { App } from './App';
 // import { App } from './App';
-import "./app.scss";
+
 import { Display } from './Display';
+import { EsercizioPost } from './EsercizioPost';
 import { Header } from './Header';
 
 // Importazione dei file di ripasso typescript
@@ -137,40 +142,30 @@ const elemento = <div className="miaclasse">
 
 
 
-const App: React.FunctionComponent = () => {
-  const myTitle = "Mio titolo 1";
+// const App: React.FunctionComponent = () => {
+//   const myTitle = "Mio titolo 1";
 
-  // Definizione di uno stato "counter" di tipo number
-  const [counter, setCounter] = useState<number>(0);
-  const counterNegativo = -counter;
+//   // Definizione di uno stato "counter" di tipo number
+//   const [counter, setCounter] = useState<number>(0);
+//   const counterNegativo = -counter;
 
-  console.log("App!");
+//   console.log("App!");
 
-  return <div>
-    {/* <Header title={myTitle} /> */}
-    <Header title={myTitle} className="red-text" />
-    <div>Ciao sono app!</div>
+//   return <div>
+//     {/* <Header title={myTitle} /> */}
+//     <Header title={myTitle} className="red-text" />
+//     <div>Ciao sono app!</div>
 
-    <Display counter={counter} />
-    <Display counter={counterNegativo} />
+//     <EsercizioPost />
 
-    <button onClick={() => {
-      setCounter(counter + 2);
-      // setCounter(counter => {
-      //   console.log("primo set counter: ", counter);
-      //   return counter + 1
-      // });
-      // setCounter(counter + 1);
-      // console.log("log in mezzo!");
-      // setCounter(counter => {
-      //   console.log("secondo set counter: ", counter);
-      //   return counter + 1
-      // });
-      // console.log("log in fondo!");
 
-    }}>Bottone</button>
-  </div>
-}
+//     {/* <Display counter={counter} />
+//     <Display counter={counterNegativo} />
+//     <button onClick={() => {
+//       setCounter(counter + 1);
+//     }}>Bottone</button> */}
+//   </div>
+// }
 
 
 

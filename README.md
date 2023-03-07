@@ -52,6 +52,8 @@
 - Equality Comparison in Javascript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness?retiredLocale=it
 - Hoisting https://developer.mozilla.org/en-US/docs/Glossary/Hoisting?retiredLocale=it
 - Render in react https://beta.reactjs.org/learn/adding-interactivity
+- Ant design https://ant.design/docs/react/use-with-create-react-app
+- MUI https://mui.com/
 
 
 ## Registrazione lezioni
