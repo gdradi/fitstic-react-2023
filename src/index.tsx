@@ -11,6 +11,7 @@ import { Display } from './Display';
 import { EsercizioPost } from './EsercizioPost';
 import { Header } from './Header';
 import { AjaxCaller } from './AjaxCaller';
+import { createBrowserRouter, RouterProvider, Link, BrowserRouter, Route, Routes } from 'react-router-dom';
 
 // Importazione dei file di ripasso typescript
 // il percorso di importazione è relativo a questo file
@@ -170,7 +171,74 @@ const elemento = <div className="miaclasse">
 
 
 
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <AjaxCaller />,
+//   },
+//   {
+//     path: "/hello",
+//     element: <div>Hello!</div>
+//   },
+// ]);
+
+const AppNonAutenticati: React.FunctionComponent = () => {
+
+  return <div>
+    <h1>App non autenticati</h1>
+    <div>
+      <Link to="">Home</Link>
+      <Link to="subpath">Subpath</Link>
+    </div>
+    <Routes>
+      <Route path="/" element={<>home non autneticati</>} />
+      <Route path="/subpath" element={<>subpath 1</>} />
+    </Routes>
+  </div>
+}
+
+const Admin: React.FunctionComponent = () => {
+
+  return <div>
+    <h1>Admin</h1>
+    <div>
+      <Link to="">Home</Link>
+      <Link to="/admin/subpath">Subpath</Link>
+    </div>
+    <Routes>
+      <Route path="" element={<>home admin</>} />
+      <Route path="subpath" element={<>admin subpath 1</>} />
+    </Routes>
+  </div>
+}
+
+
+
+const Root: React.FunctionComponent = () => {
+
+  return <BrowserRouter>
+    <div>
+      <Header title="App project work" />
+
+      <div>
+        <Link to="/">Home</Link>
+        <Link to="/admin">Admin</Link>
+      </div>
+
+      <Routes>
+        <Route path="/admin/*" element={<Admin />} />
+        <Route path="*" element={<AppNonAutenticati />} />
+      </Routes>
+
+    </div>
+  </BrowserRouter>
+}
+
+
+
+
+// --------------------------------------------
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
-root.render(<AjaxCaller />);
+root.render(<Root />);

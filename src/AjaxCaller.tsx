@@ -5,9 +5,12 @@ import { useEffect, useState } from "react";
 
 import { LoadingOutlined } from '@ant-design/icons';
 import { Spin } from 'antd';
+import { UserComponent } from "./UserComponent";
+import { UserForm } from "./UserForm";
 
 
-interface User {
+export interface User {
+    readonly id: number;
     readonly avatar: string;
     readonly email: string;
     readonly first_name: string;
@@ -26,6 +29,7 @@ export const AjaxCaller: React.FunctionComponent = () => {
         try {
             setIsLoading(true);
             setError(null);
+            // setUsersList(null);
             const response = await axios.get('https://reqres.in/api/users?delay=1');
             const payload = response.data; // Questo è tutto il payload che il server restituisce
             //const usersList: User[] = payload.data;
@@ -47,6 +51,10 @@ export const AjaxCaller: React.FunctionComponent = () => {
     return <div>
         <h1>Ajax Caller</h1>
 
+
+
+        <UserForm fetchData={fetchData} />
+
         { /* L'event handler va definito async
         perchè all'interno usiamo await */ }
         <Button onClick={fetchData} disabled={isLoading === true}>Esegui chiamata GET</Button>
@@ -54,8 +62,6 @@ export const AjaxCaller: React.FunctionComponent = () => {
         {/* <div>{JSON.stringify(usersList)}</div> */}
         {isLoading === true && <div><Spin indicator={<LoadingOutlined style={{ fontSize: 32 }} spin />} /></div>}
         {!_.isEmpty(error) && <div>{error}</div>}
-        {_.map(usersList, (user, i) => <div key={i}>
-            <img src={user.avatar} alt="avatar" />{user.first_name} {user.last_name}
-        </div>)}
+        {_.map(usersList, (user, i) => <UserComponent key={i} user={user} fetchData={fetchData} />)}
     </div>
 }
