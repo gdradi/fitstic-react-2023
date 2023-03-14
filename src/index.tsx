@@ -10,6 +10,7 @@ import { App } from './App';
 import { Display } from './Display';
 import { EsercizioPost } from './EsercizioPost';
 import { Header } from './Header';
+import { AjaxCaller } from './AjaxCaller';
 
 // Importazione dei file di ripasso typescript
 // il percorso di importazione è relativo a questo file
@@ -172,4 +173,4 @@ const elemento = <div className="miaclasse">
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
-root.render(<App />);
+root.render(<AjaxCaller />);
